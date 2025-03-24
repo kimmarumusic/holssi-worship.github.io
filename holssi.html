@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>holssi 워십팀 소개</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* 컬러 팔레트 */
+        :root {
+            --primary-color: #6366f1;  /* Tailwind의 indigo-500 */
+            --primary-dark: #4338ca; /* Tailwind의 indigo-700 */
+            --secondary-color: #f5f5f5;  /* Tailwind의 gray-100 */
+            --text-color: #374151;    /* Tailwind의 gray-800 */
+            --accent-color: #ffffff;
+        }
+        .bg-primary {
+            background-color: var(--primary-color);
+        }
+        .text-primary {
+            color: var(--primary-color);
+        }
+        .bg-secondary {
+            background-color: var(--secondary-color);
+        }
+        .text-secondary {
+            color: var(--secondary-color);
+        }
+        .text-default {
+            color: var(--text-color);
+        }
+        .bg-accent{
+            background-color: var(--accent-color);
+        }
+
+        .hover\:bg-primary:hover {
+            background-color: var(--primary-dark);
+        }
+    </style>
+</head>
+<body class="bg-secondary">
+    <header class="bg-accent shadow-md py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-default">holssi</h1>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="#home" class="text-default hover:text-primary transition duration-300">홈</a></li>
+                    <li><a href="#about" class="text-default hover:text-primary transition duration-300">소개</a></li>
+                    <li><a href="#ministries" class="text-default hover:text-primary transition duration-300">사역</a></li>
+                    <li><a href="#contact" class="text-default hover:text-primary transition duration-300">문의</a></li>
+                </ul>
+            </nav>
+            <button id="hamburger-btn" class="md:hidden text-default focus:outline-none" aria-label="메뉴 열기">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-90 z-50">
+        <div class="bg-white w-80 h-full absolute right-0 p-6">
+            <div class="flex justify-end mb-4">
+                <button id="mobile-menu-close-btn" class="text-gray-700 focus:outline-none" aria-label="메뉴 닫기">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414-1.414L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+            </div>
+            <nav class="block">
+                <ul class="space-y-4">
+                    <li><a href="#home" class="block text-lg text-default hover:text-primary transition duration-300">홈</a></li>
+                    <li><a href="#about" class="block text-lg text-default hover:text-primary transition duration-300">소개</a></li>
+                    <li><a href="#ministries" class="block text-lg text-default hover:text-primary transition duration-300">사역</a></li>
+                    <li><a href="#contact" class="block text-lg text-default hover:text-primary transition duration-300">문의</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <section id="home" class="py-16 md:py-24 bg-secondary" style="background-image: url('https://placehold.co/1920x600/EEE/31343C'); background-size: cover; background-position: center;">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">holssi 워십</h2>
+                <p class="text-gray-600 text-lg mb-8"></p>
+                <a href="#about" class="bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-6 rounded-full transition duration-300">팀 소개</a>
+            </div>
+        </section>
+
+        <section id="about" class="py-16 md:py-24">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl md:text-3xl font-bold text-default text-center mb-8">소개</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-xl font-semibold text-default mb-4">holssi 워십팀</h3>
+                        <p class="text-default mb-6">
+                            "Here and There"<br><br>
+                            우리가 모여 예배하는 이곳에서도, <br>
+                            우리가 흩어져 나아갈 그곳에서도<br>
+                            우리를 통해 일하실 하나님을 기대합니다.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="https://placehold.co/600x400/EEE/31343C" alt="holssi 워십팀 이미지" class="rounded-lg shadow-md w-full h-auto">
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <h3 class="text-xl font-semibold text-default mb-4">팀원 소개</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="text-center">
+                            <img src="https://placehold.co/150x150/EEE/31343C" alt="팀원 1" class="rounded-full mx-auto mb-2">
+                            <p class="text-default font-semibold">팀원 1</p>
+                            <p class="text-gray-600">보컬</p>
+                        </div>
+                        <div class="text-center">
+                            <img src="https://placehold.co/150x150/EEE/31343C" alt="팀원 2" class="rounded-full mx-auto mb-2">
+                            <p class="text-default font-semibold">팀원 2</p>
+                            <p class="text-gray-600">건반</p>
+                        </div>
+                        <div class="text-center">
+                            <img src="https://placehold.co/150x150/EEE/31343C" alt="팀원 3" class="rounded-full mx-auto mb-2">
+                            <p class="text-default font-semibold">팀원 3</p>
+                            <p class="text-gray-600">기타</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ministries" class="py-16 md:py-24 bg-secondary">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl md:text-3xl font-bold text-default text-center mb-8">주요 사역 보고</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-accent rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-semibold text-default mb-4">월간 정기 예배</h3>
+                        <p class="text-gray-600 mb-4">
+                            holssi 워십팀은 매월 정기 예배를 통해 하나님과의 교제를 깊게 하고, 공동체와 함께 은혜를 나누는 시간을 갖습니다.
+                            찬양, 말씀, 기도, 간증 등 다양한 순서를 통해 예배의 감동을 전달합니다.
+                        </p>
+                        <ul class="list-disc list-inside text-gray-600">
+                            <li>시간: 매월 OO일 OO시</li>
+                            <li>장소: OO교회 본당</li>
+                            <li>특징: 찬양, 말씀, 기도, 간증</li>
+                        </ul>
+                    </div>
+                    <div class="bg-accent rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-semibold text-default mb-4">특별 집회</h3>
+                        <p class="text-gray-600 mb-4">
+                            holssi 워십팀은 특별한 주제와 메시지를 담은 집회를 통해 새로운 은혜를 경험하고, 영적으로 성장하는 시간을 갖습니다.
+                            다양한 강사님과 함께 찬양, 말씀, 특별 순서를 통해 예배를 풍성하게 만들어갑니다.
+                        </p>
+                        <ul class="list-disc list-inside text-gray-600">
+                            <li>주제: OO</li>
+                            <li>강사: OOO 목사</li>
+                            <li>프로그램: 찬양, 말씀, 특별 순서</li>
+                        </ul>
+                    </div>
+                    <div class="bg-accent rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-semibold text-default mb-4">문화 사역</h3>
+                        <p class="text-gray-600 mb-4">
+                            holssi 워십팀은 음악, 영상, 디자인 등 다양한 문화 콘텐츠를 통해 복음을 전하고, 사람들과 소통합니다.
+                            콘서트, 영상 제작, 앨범 커버 디자인 등 다양한 창작 활동을 통해 하나님의 사랑을 전합니다.
+                        </p>
+                        <ul class="list-disc list-inside text-gray-600">
+                            <li>콘서트: OO 콘서트</li>
+                            <li>영상: OO 영상</li>
+                            <li>디자인: 앨범 커버, 포스터</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-16 md:py-24 bg-secondary">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl md:text-3xl font-bold text-default text-center mb-8">문의하기</h2>
+                <div class="bg-accent rounded-lg shadow-md p-8">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 text-sm font-bold mb-2">이름</label>
+                            <input type="text" id="name" placeholder="이름을 입력해주세요." class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 text-sm font-bold mb-2">이메일</label>
+                            <input type="email" id="email" placeholder="이메일 주소를 입력해주세요." class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-700 text-sm font-bold mb-2">연락처</label>
+                            <input type="tel" id="phone" placeholder="연락처를 입력해주세요." class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 text-sm font-bold mb-2">문의 내용</label>
+                            <textarea id="message" placeholder="문의 내용을 입력해주세요." class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32 resize-y"></textarea>
+                        </div>
+                        <button type="submit" class="bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-6 rounded-full transition duration-300 w-full">문의하기</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 py-6">
+        <div class="container mx-auto px-4 text-center text-gray-300">
+            &copy; 2024 holssi. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        const hamburgerBtn = document.getElementById("hamburger-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const mobileMenuCloseBtn = document.getElementById("mobile-menu-close-btn");
+        const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+        const navLinks = document.querySelectorAll('header nav a');
+        const sections = document.querySelectorAll('section');
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle("hidden");
+        }
+
+        hamburgerBtn.addEventListener("click", toggleMobileMenu);
+        mobileMenuCloseBtn.addEventListener("click", toggleMobileMenu);
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener("click", toggleMobileMenu);
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!mobileMenu.classList.contains('hidden') && !mobileMenu.contains(event.target) && event.target !== hamburgerBtn) {
+                toggleMobileMenu();
+            }
+        });
+
+        function updateActiveNavLink() {
+            let currentSectionId = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop - 100 && window.scrollY < sectionTop + sectionHeight - 100) {
+                    currentSectionId = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === currentSectionId) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveNavLink);
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
